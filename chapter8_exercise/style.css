@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 960px;
+  margin: 50px auto;
+}
+
+.list {
+  margin-bottom: 50px;
+}
+
+.list-box {
+  padding: 20px;
+  list-style: none;
+}
+
+.list-box:nth-child(odd) {
+  background-color: #ababab;
+}
+
+.rect {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rect-box {
+  height: 200px;
+  width: 30%;
+  margin-bottom: 40px;
+  margin-right: 5%;
+  background-color: #ffd700;
+}
+
+.rect-box:first-child,
+.rect-box:nth-child(5),
+.rect-box:last-child {
+  background-color: #ff8c00;
+}
+
+.rect-box:nth-child(3n) {
+  margin-right: 0;
+}
