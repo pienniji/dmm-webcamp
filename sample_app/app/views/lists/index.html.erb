@@ -4,6 +4,7 @@
 <!-- @listsで取得したすべての保存データをeachメソッドで繰り返し取得し、listに保存 -->
 
   <p>タイトル</p>
-  <span><%= list.title %></span>
+  <span>
+    <%= link_to list.title, lists_path(list.id) %></span>
 
 <% end %>

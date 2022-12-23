@@ -9,7 +9,7 @@ class ListsController < ApplicationController
     # 3.データをデータベースに保存するためのsaveメソッドを実行
     list.save
     #4.トップ画面へリダイレクト
-    redirect_to '/top'
+    redirect_to list_path(list.id)
   end
 
   def index
@@ -17,6 +17,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    @list = List.find(params[:id]) #findメソッドは引数を受け取り、idカラムを引数と比べてレコードを取得してくるメソッド /lists/1    => List.find(params[:id]) => idが1のレコードを取得
   end
 
   def edit
