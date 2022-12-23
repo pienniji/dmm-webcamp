@@ -12,6 +12,10 @@ class ListsController < ApplicationController
     redirect_to '/top'
   end
 
+  def index
+    @lists = List.all #全てのlistテーブルの保存データを取得　今回は数のListレコードが取得できるので、複数形で@listsという変数名に
+  end
+
   def show
   end
 
