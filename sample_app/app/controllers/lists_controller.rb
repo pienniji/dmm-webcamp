@@ -6,6 +6,7 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)  # 1.&2.データを受け取り新規登録するためのインスタンスの作成
     if @list.save # 3.対象のカラムにデータが入力されていればデータをデータベースに保存するためのsaveメソッドを実行
+      flash[:notice] = "投稿が成功しました"
       redirect_to list_path(@list.id) #4.トップ画面へリダイレクト
     else
       render :new #falseならば、新規投稿ページを再表示するように設定します。
